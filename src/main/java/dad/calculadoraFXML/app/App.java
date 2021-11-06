@@ -1,6 +1,6 @@
-package dad.calculadoraCompleja.app;
+package dad.calculadoraFXML.app;
 
-import dad.calculadoraCompleja.view.Controller;
+import dad.calculadoraFXML.view.Controller;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

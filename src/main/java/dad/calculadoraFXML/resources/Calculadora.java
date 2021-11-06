@@ -1,4 +1,4 @@
-package dad.calculadoraCompleja.resources;
+package dad.calculadoraFXML.resources;
 
 /**
  * Implementaci�n de la l�gica de una calculadora.

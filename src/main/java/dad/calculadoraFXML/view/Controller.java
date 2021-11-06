@@ -1,10 +1,10 @@
-package dad.calculadoraCompleja.view;
+package dad.calculadoraFXML.view;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import dad.calculadoraCompleja.resources.Calculadora;
+import dad.calculadoraFXML.resources.Calculadora;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -111,7 +111,8 @@ public class Controller implements Initializable {
 
 	@FXML
 	void on3Action(ActionEvent event) {
-
+		calculadora.insertar('3');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
@@ -122,42 +123,50 @@ public class Controller implements Initializable {
 
 	@FXML
 	void on5Action(ActionEvent event) {
-
+		calculadora.insertar('5');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void on6Action(ActionEvent event) {
-
+		calculadora.insertar('6');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void on7Action(ActionEvent event) {
-
+		calculadora.insertar('7');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void on8Action(ActionEvent event) {
-
+		calculadora.insertar('8');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void on9Action(ActionEvent event) {
-
+		calculadora.insertar('9');
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void onBorrarAction(ActionEvent event) {
-
+		calculadora.borrar();
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void onBorrarTodoAction(ActionEvent event) {
-
+		calculadora.borrarTodo();
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void onDecimalAction(ActionEvent event) {
-
+		calculadora.insertarComa();
+		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
@@ -180,12 +189,13 @@ public class Controller implements Initializable {
 
 	@FXML
 	void onRestarAction(ActionEvent event) {
-		
+		calculadora.operar(Calculadora.RESTAR);
 		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
 	@FXML
 	void onSumaAction(ActionEvent event) {
+		calculadora.operar(Calculadora.SUMAR);
 		getPantallaTextField().setText(calculadora.getPantalla());
 	}
 
