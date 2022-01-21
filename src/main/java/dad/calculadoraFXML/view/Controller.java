@@ -10,8 +10,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 public class Controller implements Initializable {
 
@@ -74,7 +76,19 @@ public class Controller implements Initializable {
 
 	@FXML
 	private GridPane view;
+	
+	@FXML
+    private MenuItem normalItem;
+	
+	@FXML
+    private MenuItem clasicaItem;
 
+	@FXML
+    private MenuItem modernaItem;
+	
+	@FXML
+    private VBox root;
+	
 	private Calculadora calculadora;
 	
 	public Controller() {
@@ -91,6 +105,23 @@ public class Controller implements Initializable {
 		calculadora = new Calculadora();
 	}
 
+	@FXML
+    void onNormalStyleAction(ActionEvent event) {
+		view.getStylesheets().clear();
+    }
+	
+	@FXML
+    void onClasicaStyleAction(ActionEvent event) {
+		view.getStylesheets().clear();
+		view.getStylesheets().add(getClass().getResource("/css/clasica.css").toExternalForm());
+    }
+	
+	@FXML
+    void onModernaStyleAction(ActionEvent event) {
+		view.getStylesheets().clear();
+		view.getStylesheets().add(getClass().getResource("/css/moderna.css").toExternalForm());
+    }
+	
 	@FXML
 	void on0Action(ActionEvent event) {
 		calculadora.insertar('0');
@@ -203,8 +234,8 @@ public class Controller implements Initializable {
 		return pantallaTextField;
 	}
 
-	public GridPane getView() {
-		return view;
+	public VBox getRoot() {
+		return root;
 	}
 
 	public Calculadora getCalculadora() {

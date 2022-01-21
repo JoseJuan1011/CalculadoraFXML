@@ -12,7 +12,7 @@ public class App extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		Scene scene = new Scene(view.getView());
+		Scene scene = new Scene(view.getRoot());
 		
 		primaryStage.setTitle("CalculadoraFXML");
 		primaryStage.setScene(scene);
